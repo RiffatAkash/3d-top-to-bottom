@@ -1,66 +1,79 @@
 *{
-	margin: 0;
-	padding: 0;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	box-sizing: border-box;
+    padding:0;
+    margin:0;
+    -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-body,html{
-	height: 250px;
-	width: 300px;
+
+
+#container{
+    width: 300px;
+    height: 250px;
+    top:0;
+    left:0;
+    perspective: 1500px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ffffff00;
 }
-.rotating-box {
-	width: 300px;
-	height: 250px;
-	/* margin: 10px auto;
-	left: 0;
-	top: 0; */
-	perspective: 4000px;
+.slide{
+    overflow: hidden;
 }
-.single-rb {
-	width: 300px;
-	height: 250px;
-	animation: rotate 15s linear infinite;
-	transform-style: preserve-3d;
-	margin-top: 10px;
-	margin-left: 1px;
+.slide img{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.single-rb img {
-	height: 250px;
-	width: 300px;
+.slide .right_woman{
+    left: 46px;
 }
-.single-rb div {
-	position: absolute;
-	width: 300px;
-	height: 250px;
+.slide .left_man{
+    left: auto;
+    right: 25px;
 }
-.front-side {
-	transform: translateZ(50px);
+.navigation{
+    display: none;
 }
-.back-side {
-	transform: rotateY(180deg) translateZ(200px);
+
+.controls{
+    top: 27% !important;
+    opacity: 0;
 }
-.left-side {
-	transform: rotateY(-90deg) translateX(-200px);
-	transform-origin: left;
+#invis{
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    opacity: 0;
 }
-.right-side {
-	transform: rotateY(90deg) translateX(200px);
-	transform-origin: right;
+#hand img{
+    width: 31px !important;
+    height: 30px !important;
 }
-.top-side {
-	transform: rotateX(90deg) translateY(-200px);
-	transform-origin: top;
+
+#video{
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    position: relative;
 }
-.bottom-side {
-	transform: rotateX(-90deg) translateY(200px);
-	transform-origin: bottom;
+.video-controls{
+    top: -36px;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-@keyframes rotate {
-	0% {
-		transform: rotateX(0deg);
-	}
-	100% {
-		transform: rotateX(360deg);
-	}
+.sound{
+    float: right;
+    background: none;
+    color: white;
+    border: none;
 }
+.toggle{
+    background: none;
+    color: white;
+    border: none;
+}
+/*side background color*/
